@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Library Membership Registration</title>
+    <style media="screen">
+      body {
+        font-family: Arial;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-image: url(test.jfif);
+      }
+      label {
+        display: block;
+        margin: 20px 10px;
+        font-weight: bold;
+      }
+      label::after {
+        content: "*";
+    		color: red;
+      }
+      input, select {
+        margin: 10px;
+        padding: 10px;
+        width: 95%;
+        border: none;
+        background: inherit;
+        backdrop-filter: blur(10px);
+      }
+      input[type=radio], input[type=checkbox] {
+        display: inline;
+        width: auto;
+        backdrop-filter: blur(0px);
+      }
+      input[type=submit] {
+        width: 50%;
+        margin: 3% 25%;
+      }
+      input:hover, select:hover{
+        opacity: 60%;
+      }
+      input[type=submit]:hover {
+        background-color: #bacb4d;
+      }
+      .container {
+        margin: 2% 25%;
+        padding: 2% 5%;
+        border-radius: 15px;
+        background-color: rgba(255, 255, 255, .35);
+        backdrop-filter: blur(10px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 style="text-align:center">Library Membership Form</h1> <!-- Inline CSS -->
+      <hr>
+      <form action="index.html" method="post">
+        <label for="name">Student's Name</label>
+        <input type="text" name="name" id="name" required><br>
+
+        <label for="course">Course of Study</label>
+        <select name="course" id="course" required>
+          <option></option>
+          <option value="BCA">BCA</option>
+          <option value="BBA">BBA</option>
+          <option value="Bio Tech">Bio Tech</option>
+        </select>
+        <label for="reg no.">Registration Number</label>
+        <input type="number" name="reg no." id="reg no." required><br>
+
+        <label for="email">Email</label>
+        <input type="email" name="Email" for="email" required><br>
+
+        <label for="phone no.">Phone Number</label>
+        <input type="tel" name="phone no." id="phone no." value="+91" size="13" required><br>
+
+        <label>Gender</label>
+        <input type="radio" name="gender" value="Male">Male
+        <input type="radio" name="gender" value="Female">Female
+        <input type="radio" name="gender" value="Other">Other<br>
+
+        <label>What will you be using library for?</label>
+        <input type="radio" name="use case" value="Reference">Reference
+        <input type="radio" name="use case" value="In House Reading">In House Reading
+        <input type="radio" name="use case" value="Borrowing">Borrowing<br>
+
+        <label>What section of the library would you like access to?</label>
+        <input type="checkbox" name="section" value="Magazines">Magazines
+        <input type="checkbox" name="section" value="Fiction">Fiction
+        <input type="checkbox" name="section" value="Non-Fiction">Non-Fiction
+        <input type="checkbox" name="section" value="Electronic">Electronic
+        <input type="checkbox" name="section" value="Research & Reference">Research & Reference<br>
+
+        <label for="psw">Password</label>
+        <input type="password" name="psw" id="psw"><br>
+
+        <label for="psw-repeat">Re-type Password</label>
+        <input type="password" name="psw-repeat" id="psw-repeat"><br><br>
+
+        <input type="submit" value="Register">
+      </form>
+    </div>
+  </body>
+</html>
